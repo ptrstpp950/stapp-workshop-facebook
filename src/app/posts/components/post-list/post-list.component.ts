@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
+  posts = [1, 4, 4, 2];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  trackPost(index:number,){
+    return index;
   }
 
 }
