@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostsService } from '../../services/posts.service';
+import { Posts } from '../../interfaces/posts.interface';
 
 @Component({
   selector: 'app-post-list',
@@ -7,15 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostListComponent implements OnInit {
 
-  posts = [1, 4, 4, 2];
+  posts:Posts = [];
 
-  constructor() { }
+  constructor(
+    private postService: PostsService
+  ) { }
 
   ngOnInit() {
+    this.setupPosts();
   }
 
   trackPost(index:number,){
     return index;
   }
 
+  private setupPosts() {
+    this.postService.getPosts()
+    .subscribe({
+      next: (response:any) => {
+        this.posts = response.posts;
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    });
+  }
 }
