@@ -1,22 +1,29 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Post } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post-list-item',
   templateUrl: './post-list-item.component.html',
-  styleUrls: ['./post-list-item.component.scss']
+  styleUrls: ['./post-list-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostListItemComponent implements OnInit {
 
   @Input("post")
   post:Post = null;
 
-  constructor() { }
+  constructor(
+    private changeDetector: ChangeDetectorRef
+  ) { }
 
   ngOnInit() {
+    setTimeout(()=>{
+      this.changeDetector.detectChanges();
+    }, 500);
   }
 
   getAuthorLink(){
+    console.log('running getAuthorLink');
     return `/users/${this.post.author.id}`;
   }
   getPostLink(){
