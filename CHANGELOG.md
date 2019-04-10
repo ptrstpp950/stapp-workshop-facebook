@@ -1,5 +1,10 @@
+<a name="0.0.2"></a>
+## [0.0.2](https://github.com/ptrstpp950/stapp-workshop-facebook/compare/v0.0.1...v0.0.2) (2019-04-10)
+
+
+
 <a name="0.0.1"></a>
-## 0.0.1 (2019-04-10)
+## [0.0.1](https://github.com/ptrstpp950/stapp-workshop-facebook/compare/be95e0b...v0.0.1) (2019-04-10)
 
 
 ### Bug Fixes
