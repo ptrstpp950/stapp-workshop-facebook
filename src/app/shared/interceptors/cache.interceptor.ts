@@ -17,10 +17,10 @@ export class CacheInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     console.log("Man!! You are requesting " + req.url);
 
-    if (this.cache.has(req.url)) {
+    /*if (this.cache.has(req.url)) {
       console.log("Man!! Cached!!!! For " + req.url);
       return of(this.cache.get(req.url));
-    }
+    }*/
     return next.handle(req)
       .pipe(
           filter(evt => evt instanceof HttpResponse),

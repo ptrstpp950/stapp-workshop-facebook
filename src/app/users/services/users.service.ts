@@ -21,6 +21,7 @@ export class UsersService {
   getUsers(): Observable<User[]> {
     return this.http.get<PostsResponses>(environment.postUrl)
       .pipe(
+        delay(2000),
         map((response) => {
           return response.posts;
         }),

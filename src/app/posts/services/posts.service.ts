@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 import { PostsResponses } from '../interfaces/responses/posts-response.interface';
@@ -20,7 +20,10 @@ export class PostsService {
   ) { }
 
   getPosts() {
-    return this.http.get<PostsResponses>(environment.postUrl);
+    return this.http.get<PostsResponses>(environment.postUrl)
+      .pipe(
+        delay(2000)
+      );
   }
 
   getPostById(postId: string): Observable<Post> {
