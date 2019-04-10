@@ -13,7 +13,7 @@
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'Regenerate CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'Regenerate CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
     "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'Regenerate CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
-    "changelog": "git-changelog -e"
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "husky": {
     "hooks": {
@@ -48,9 +48,9 @@
     "@types/node": "~8.9.4",
     "ajv": "^6.10.0",
     "codelyzer": "~4.5.0",
+    "conventional-changelog-cli": "^2.0.12",
     "generate-changelog": "^1.7.1",
     "gh-pages": "^2.0.1",
-    "git-changelog": "^1.1.2",
     "husky": "^1.3.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
