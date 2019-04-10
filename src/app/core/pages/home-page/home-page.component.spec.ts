@@ -1,9 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomePageComponent } from './home-page.component';
-import { PostListComponent } from 'src/app/posts/components/post-list/post-list.component';
-import { PostListItemComponent } from 'src/app/posts/components/post-list-item/post-list-item.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { PostListComponent } from 'src/app/shared/components/post-list/post-list.component';
+import { PostListItemComponent } from 'src/app/shared/components/post-list-item/post-list-item.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 describe('HomePageComponent', () => {
@@ -13,9 +15,13 @@ describe('HomePageComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        RouterTestingModule,
+        SharedModule
       ],
-      declarations: [ HomePageComponent, PostListComponent, PostListItemComponent ]
+      declarations: [
+        HomePageComponent
+      ]
     })
     .compileComponents();
   }));

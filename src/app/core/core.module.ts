@@ -7,7 +7,7 @@ import localePL from '@angular/common//locales/pl';
 import { CoreRoutingModule } from './core-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { PostsModule } from '../posts/posts.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 registerLocaleData(localePL)
@@ -20,8 +20,8 @@ registerLocaleData(localePL)
   imports: [
     BrowserModule,
     CoreRoutingModule,
-    PostsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [
     {
