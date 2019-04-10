@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { User } from "src/app/shared/interfaces/user.interface";
 import { HttpClient } from '@angular/common/http';
+
+import { Observable, throwError } from 'rxjs';
+import { map, delay, catchError } from 'rxjs/operators';
+
+import { User } from "src/app/shared/interfaces/user.interface";
 import { PostsResponses } from 'src/app/posts/interfaces/responses/posts-response.interface';
 import { environment } from 'src/environments/environment';
-import { map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,21 +15,31 @@ import { map } from 'rxjs/operators';
 export class UsersService {
 
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
 
-  getUserById(authorId: string): Observable<User> {
+  getUsers(): Observable<User[]> {
     return this.http.get<PostsResponses>(environment.postUrl)
       .pipe(
-        map((response)=> {
+        map((response) => {
           return response.posts;
         }),
-        map((posts) =>{
-          return posts.filter((post)=>{
-            return post.author.id === authorId;
-          });
+        map((posts => {
+          const users = posts.map(p => p.author);
+          return users;
+        }))
+      )
+  }
+
+  getUserById(userId: string){
+    return this.getUsers()
+      .pipe(
+        map((users) => {
+          return users.find(user => user.id === userId);
         }),
-        map(posts=> posts[0].author)
-    );
+        catchError(err=> {
+          throw err;
+        })
+      );
   }
 }

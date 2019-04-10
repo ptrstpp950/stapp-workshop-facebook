@@ -1,7 +1,20 @@
-<div class="media" *ngIf="user !== null">
-    <img class="mr-3" [src]="user.avatar_url" alt="Generic placeholder image">
-    <div class="media-body">
-      <h5 class="mt-0">{{ user.name }}</h5>
-      I'm {{ user.name }}. I want to be awesome!
+<ng-container *ngIf="error; else content">
+  <p>Error.</p>
+</ng-container>
+
+
+<ng-template #content>
+  <ng-container *ngIf="user !== null; else loading">
+    <div class="media">
+      <img class="mr-3" [src]="user.avatar_url" alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0">{{ user.name }}</h5>
+        I'm {{ user.name }}. I want to be awesome!
+      </div>
     </div>
-  </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <p>loading...</p>
+  </ng-template>
+</ng-template>

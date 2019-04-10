@@ -12,6 +12,7 @@ import { UsersService } from '../../services/users.service';
 export class UserPageComponent implements OnInit {
 
   user:User = null;
+  error = null;
 
   constructor(
     private usersService: UsersService,
@@ -30,7 +31,9 @@ export class UserPageComponent implements OnInit {
           this.user = response;
         },
         error: (err) => {
-          console.error(err);
+          this.user = null;
+          this.error = err;
+          console.log("----errr-r");
         }
       });
   }
