@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  postUrl: '/assets/posts.json'
+  postUrl: '/stapp-workshop-facebook/assets/posts.json'
 };

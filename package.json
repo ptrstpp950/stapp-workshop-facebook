@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "predeploy": "ng build --base-href=/stapp-workshop-facebook/",
+    "predeploy": "ng build --prod --base-href=/stapp-workshop-facebook/",
     "deploy": "gh-pages -d dist/stapp-workshop-facebook/",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'Regenerate CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'Regenerate CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
