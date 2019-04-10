@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  postUrl: '/assets/posts.json'
+  postUrl: './assets/posts.json'
 };
 
 /*
