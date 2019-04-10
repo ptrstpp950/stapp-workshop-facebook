@@ -23,7 +23,6 @@ export class PostListItemComponent implements OnInit {
   }
 
   getAuthorLink(){
-    console.log('running getAuthorLink');
     return `/users/${this.post.author.id}`;
   }
   getPostLink(){

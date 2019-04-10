@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { map, filter, single } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 import { PostsResponses } from '../interfaces/responses/posts-response.interface';
 import { environment } from 'src/environments/environment';
-import { post } from 'selenium-webdriver/http';
-import { Observable } from 'rxjs';
+
 import { Post } from '../interfaces/post.interface';
 
 

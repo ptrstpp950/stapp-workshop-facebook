@@ -1,7 +1,7 @@
 <div class="card" *ngIf="post !== null">
   <div class="card-header">
     <h5>
-      <a [href]="getAuthorLink()">{{ post.author.name }}</a>
+      <a [routerLink]="getAuthorLink()">{{ post.author.name }}</a>
     </h5>
     <a [routerLink]="getPostLink()">
       {{ post.created_time | date: 'fullDate' }}
