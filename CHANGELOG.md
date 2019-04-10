@@ -1,49 +1,30 @@
-## 1.0.0 (2019-04-09)
+<a name="0.0.1"></a>
+## 0.0.1 (2019-04-10)
 
-##### Documentation Changes
 
-* **changelog:**  added first changelog (13bf70c2)
+### Bug Fixes
 
-##### New Features
+* **changelog:** changelog ([b6bf393](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/b6bf393))
+* **changelog:** fix changelog ([3ec4e40](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/3ec4e40))
+* **changelog:** move changelog ([93cac77](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/93cac77))
+* **config:** fix enviroment config ([341f656](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/341f656))
+* **posts:** fix postUrl to be local instead of global ([3fb20ba](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/3fb20ba))
+* **test:** e2e tests ([ff3176b](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/ff3176b))
+* **tests:** add teardown in tests ([5f1ba7d](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/5f1ba7d))
+* **tests:** fix bad tests ([f02d2e3](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/f02d2e3))
+* **tests:** fix test for app.component ([6eb3d4e](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/6eb3d4e))
 
-* **posts:**
-  *  enable OnPushStrategy (0456b748)
-  *  fetch posts from server and display it (a466ab90)
-  *  create post list item (a0bfeb19)
-  *  create posts module and component (72756233)
-* **styles:**  add bootstrap (3e0af438)
-* **homepage:**  create home-page (1a5e3e48)
-* **deploy:**  configure deployment (d5d597c7)
-* **changelog:**  configure changelog (be95e0bb)
 
-##### Bug Fixes
+### Features
 
-* **changelog:**
-  *  fix changelog (3ec4e402)
-  *  changelog (b6bf3935)
-  *  move changelog (93cac77b)
-* **test:**  e2e tests (ff3176b8)
-* **tests:**
-  *  fix bad tests (f02d2e32)
-  *  fix test for app.component (6eb3d4ec)
-  *  add teardown in tests (5f1ba7d1)
+* **changelog:** configure changelog ([be95e0b](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/be95e0b))
+* **deploy:** configure deployment ([d5d597c](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/d5d597c))
+* **homepage:** create home-page ([1a5e3e4](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/1a5e3e4))
+* **posts:** create post list item ([a0bfeb1](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/a0bfeb1))
+* **posts:** create posts module and component ([7275623](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/7275623))
+* **posts:** enable OnPushStrategy ([0456b74](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/0456b74))
+* **posts:** fetch posts from server and display it ([a466ab9](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/a466ab9))
+* **styles:** add bootstrap ([3e0af43](https://github.com/ptrstpp950/stapp-workshop-facebook/commit/3e0af43))
 
-##### Refactors
 
-*  from AppRoutingModule to CoreRoutingModule (e89cb2b2)
-*  move app.component into app subdir (57241282)
-*  move app.component to app\core (58b7b5d5)
-*  renamame app.module to core.module (87945f36)
-
-##### Tests
-
-* **schema:**  added schema tests (b25a900c)
-
-#### 0.0.0 (2019-04-09)
-
-##### New Features
-
-* **changelog:**  configure changelog (be95e0bb)
-
-#### 0.0.0 (2019-04-09)
 
